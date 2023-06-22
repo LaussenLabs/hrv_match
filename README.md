@@ -30,7 +30,7 @@ pip install -r requirements.txt
 ## Usage
 
 If you're looking to better understand the algorithm, we recommend walking through the provided 
-[Notebook Example](./main.ipynb) which shows the key steps of the algorithm in detail.
+[Notebook Example](./algorithm_explantation.ipynb) which shows the key steps of the algorithm in detail.
 
 If you just want to quickly get started, here is an example of using HRV Match to align two ECG signals pulled from 
 MIT-BIH:
