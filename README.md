@@ -29,7 +29,11 @@ pip install -r requirements.txt
 
 ## Usage
 
-Here is an example of using HRV Match to align two HRV signals:
+If you're looking to better understand the algorithm, we recommend walking through the provided 
+[Notebook Example](./main.ipynb) which shows the key steps of the algorithm in detail.
+
+If you just want to quickly get started, here is an example of using HRV Match to align two ECG signals pulled from 
+MIT-BIH:
 
 ```python
 import numpy as np
@@ -77,8 +81,6 @@ signal_b_peak_times = signal_b_signal_times[peak_indices_b]
 # Align signal A to the signal B clock.
 aligned_signal_a_times = align_peaks(signal_a_peak_times, signal_b_peak_times, signal_a_signal_times)
 ```
-
-Checkout `main.ipynb` for a jupyter notebook detailing the methods this library implements.
 
 ## Documentation
 
