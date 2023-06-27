@@ -10,9 +10,6 @@ def get_density_filtered_matches(signal_a_times: np.ndarray, signal_b_times: np.
     if max_offset is None:
         max_offset = max(signal_a_times[-1], signal_b_times[-1]) - min(signal_a_times[0], signal_b_times[0])
 
-    # offset_matrix = match_data['p_t'][match_data[
-    #     'match_indices_matrix']] - match_data['n_t'][:match_data['match_indices_matrix'].shape[0]].reshape(-1, 1)
-
     offset_matrix = signal_b_times[match_indices_matrix] - signal_a_times[:match_indices_matrix.shape[0]].reshape(-1, 1)
 
     if offset_matrix.shape[0] < density_time_step_size * density_time_steps_per_window:
@@ -45,8 +42,6 @@ def get_density_filtered_matches(signal_a_times: np.ndarray, signal_b_times: np.
     counter_bins = np.zeros(offset_bins.shape, dtype=np.int64)
 
     accepted_bool_1 = np.zeros(offset_v.shape, dtype=bool)
-    # accepted_bool_2 = np.zeros(offset_matrix.shape, dtype=np.bool)
-    # accepted_bool_3 = np.zeros(offset_matrix.shape, dtype=np.bool)
 
     density_time_window_size = density_time_step_size * density_time_steps_per_window
 
