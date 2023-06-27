@@ -15,7 +15,7 @@ from peakalignment.signal_matching import get_matches
 from tests.add_gaps import add_gaps, convert_gaps_to_intervals, apply_gaps
 import numpy as np
 
-from consensus_peaks import consensus_detect
+# from consensus_peaks import consensus_detect
 
 def test_calculate_alignment():
     # Set up raw data
